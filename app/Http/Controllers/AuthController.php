@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
-    public function register(Request $request)
+    /**
+     * Register User
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function register(Request $request): JsonResponse
     {
         // Validation
         $validation = Validator::make($request->all(), [
@@ -50,7 +58,14 @@ class AuthController extends Controller
         }
     }
 
-    public function login(Request $request)
+    /**
+     * Login User
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function login(Request $request): JsonResponse
     {
         // Validation
         $validation = Validator::make($request->all(), [
@@ -89,7 +104,13 @@ class AuthController extends Controller
         ]);
     }
 
-    public function logout()
+    
+    /**
+     * Logout user.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logout(): JsonResponse
     {
         /** @var \App\Models\User $user */
         $user = auth()->user();
@@ -107,7 +128,12 @@ class AuthController extends Controller
         ]);
     }
 
-    public function logoutFromAll()
+    /**
+     * Logout user from all.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function logoutFromAll(): JsonResponse
     {
         /** @var \App\Models\User $user */
         $user = auth()->user();
