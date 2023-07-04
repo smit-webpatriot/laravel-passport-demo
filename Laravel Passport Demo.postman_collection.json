@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "b2b79db2-f6c7-44ec-98a8-99b50ece72c7",
+		"name": "Laravel Passport Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Smit",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "smit@demo.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.8:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@demo.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.8:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User(Profile)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODVhNzRjZDNiNjIxNjg0NDg5NTg5ZDI0MjdkMDBlODk4OTc0OTAzYWZjZDBhMjU0NzRmYzlhZGI2NGFiYzAxY2UxNWM1MGIyMDQ2NzZiNDkiLCJpYXQiOjE2ODg0NTI0MTAuMDM3OTUxLCJuYmYiOjE2ODg0NTI0MTAuMDM3OTU2LCJleHAiOjE3MjAwNzQ4MTAuMDMwNDkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.55TYzhBtthCe04NzAZLdK60iMgKJWblKeM9SOyClu3FXdQDDyzCXhxPwt6ntVIOi8qGee_ERkWtiZVTIFzHUo7h6FNaLc2iyO8w8b9WFM4shGmoelzUpZ4JZ1SrgLUyIxW3EcE5qImdaEJEtK-gYXz6f9PjZWPsG32ijr3ghsuqkcukVrNPKxtPlyj9E3QmRyxgeJ8bNbQispzrXz8FNonMNhY5pijQGa_8IguQNf2g2yfjuEFeY4hSUDNyIksLSEyeeH3CDlpe1ePpWunm4Wa0K4cQqdGtR8yIcToogQxEbZ4W7AhmIdm4klrms2SagfYQz5Po17vj7cx_r_enxf63L_1s_OF-5WfiPPZABVfJoeLaUpzih0_Ip0aHN1bgKINuqiRidJW0jQKwpyUzXuft2jCfhoTo4hMs6RByZJQ14GyQwh10GGt08ZmVG_oTWEiANPewzN2XE-VLzlYwqjoUm7Fw6K1hhrK0ShOb9HC_PdI-_TddcC2Sm20XfK6vwaE9G2UUd04R5N0TfZLEnLxZbq_w-miB33QTgrpveb3Dad8PL21NoTfP6YIBpfl7kw9TuVnGhNpABm4pDFmGrnTjUWpWXMpNOOdOCWUbbzCRPB7kj542WHBGpsmKXgZeR1UUqJo_FEcJCmuP_aSZIAZs6fZqZooE5XMg97NbFUAo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.8:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODVhNzRjZDNiNjIxNjg0NDg5NTg5ZDI0MjdkMDBlODk4OTc0OTAzYWZjZDBhMjU0NzRmYzlhZGI2NGFiYzAxY2UxNWM1MGIyMDQ2NzZiNDkiLCJpYXQiOjE2ODg0NTI0MTAuMDM3OTUxLCJuYmYiOjE2ODg0NTI0MTAuMDM3OTU2LCJleHAiOjE3MjAwNzQ4MTAuMDMwNDkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.55TYzhBtthCe04NzAZLdK60iMgKJWblKeM9SOyClu3FXdQDDyzCXhxPwt6ntVIOi8qGee_ERkWtiZVTIFzHUo7h6FNaLc2iyO8w8b9WFM4shGmoelzUpZ4JZ1SrgLUyIxW3EcE5qImdaEJEtK-gYXz6f9PjZWPsG32ijr3ghsuqkcukVrNPKxtPlyj9E3QmRyxgeJ8bNbQispzrXz8FNonMNhY5pijQGa_8IguQNf2g2yfjuEFeY4hSUDNyIksLSEyeeH3CDlpe1ePpWunm4Wa0K4cQqdGtR8yIcToogQxEbZ4W7AhmIdm4klrms2SagfYQz5Po17vj7cx_r_enxf63L_1s_OF-5WfiPPZABVfJoeLaUpzih0_Ip0aHN1bgKINuqiRidJW0jQKwpyUzXuft2jCfhoTo4hMs6RByZJQ14GyQwh10GGt08ZmVG_oTWEiANPewzN2XE-VLzlYwqjoUm7Fw6K1hhrK0ShOb9HC_PdI-_TddcC2Sm20XfK6vwaE9G2UUd04R5N0TfZLEnLxZbq_w-miB33QTgrpveb3Dad8PL21NoTfP6YIBpfl7kw9TuVnGhNpABm4pDFmGrnTjUWpWXMpNOOdOCWUbbzCRPB7kj542WHBGpsmKXgZeR1UUqJo_FEcJCmuP_aSZIAZs6fZqZooE5XMg97NbFUAo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.8:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout From All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODVhNzRjZDNiNjIxNjg0NDg5NTg5ZDI0MjdkMDBlODk4OTc0OTAzYWZjZDBhMjU0NzRmYzlhZGI2NGFiYzAxY2UxNWM1MGIyMDQ2NzZiNDkiLCJpYXQiOjE2ODg0NTI0MTAuMDM3OTUxLCJuYmYiOjE2ODg0NTI0MTAuMDM3OTU2LCJleHAiOjE3MjAwNzQ4MTAuMDMwNDkxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.55TYzhBtthCe04NzAZLdK60iMgKJWblKeM9SOyClu3FXdQDDyzCXhxPwt6ntVIOi8qGee_ERkWtiZVTIFzHUo7h6FNaLc2iyO8w8b9WFM4shGmoelzUpZ4JZ1SrgLUyIxW3EcE5qImdaEJEtK-gYXz6f9PjZWPsG32ijr3ghsuqkcukVrNPKxtPlyj9E3QmRyxgeJ8bNbQispzrXz8FNonMNhY5pijQGa_8IguQNf2g2yfjuEFeY4hSUDNyIksLSEyeeH3CDlpe1ePpWunm4Wa0K4cQqdGtR8yIcToogQxEbZ4W7AhmIdm4klrms2SagfYQz5Po17vj7cx_r_enxf63L_1s_OF-5WfiPPZABVfJoeLaUpzih0_Ip0aHN1bgKINuqiRidJW0jQKwpyUzXuft2jCfhoTo4hMs6RByZJQ14GyQwh10GGt08ZmVG_oTWEiANPewzN2XE-VLzlYwqjoUm7Fw6K1hhrK0ShOb9HC_PdI-_TddcC2Sm20XfK6vwaE9G2UUd04R5N0TfZLEnLxZbq_w-miB33QTgrpveb3Dad8PL21NoTfP6YIBpfl7kw9TuVnGhNpABm4pDFmGrnTjUWpWXMpNOOdOCWUbbzCRPB7kj542WHBGpsmKXgZeR1UUqJo_FEcJCmuP_aSZIAZs6fZqZooE5XMg97NbFUAo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.8:8000/api/logout-from-all",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"8"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout-from-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
