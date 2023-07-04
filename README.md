@@ -7,9 +7,14 @@
 git clone git@github.com:smit-webpatriot/laravel-passport-demo.git
 ```
 
+**Switch to that directory**
+```bash
+cd laravel-passport-demo
+```
+
 **Copy .env**
 ```bash
-cp .env.example .env
+[cp/copy] .env.example .env
 ```
 
 **Configure that .env file**
@@ -20,6 +25,11 @@ DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=<password>
+```
+
+**Install required libraries using composer**
+```bash
+composer install
 ```
 
 **Generate APP_KEY**
